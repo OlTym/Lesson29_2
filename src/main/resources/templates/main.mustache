@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Spring</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+</head>
+<body>
+    <div>Add user </div></br>
+    <form method="post" >
+              <div>"Name"</div>
+            <input type="text" name="name"/></br></br>
+             <div>"Email"</div>
+            <input type="text" name="mail"/></br></br>
+            <button type="submit">Add</button>
+         </form></br>
+             {{#users}}
+                <div>
+                  User  <span>{{name}}</span> added
+                </div>
+            {{/users}}
+              {{#message}}
+               <div>
+          {{message}}
+              </div>
+            {{/message}}
+
+  </body>
+</html>
