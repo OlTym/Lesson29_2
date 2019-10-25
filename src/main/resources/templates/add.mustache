@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Spring</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+ <style>
+  body{
+     background-color: lightgrey;
+  }
+  h2{
+     text-align: center;
+  }
+  #header{
+     border-bottom:3px gray;
+     border-bottom-style:ridge;
+  }
+  #content{
+     text-align: center;
+     font-size:1.2em;
+  }
+  </style>
+
+</head>
+<body>
+   <div id="header"><h2>Add user </h2></div><br>
+   <div id="content">
+     <form method="post" action="add">
+          <div> "Name" </div><br>
+           <input type="text" name="name"/><br><br>
+             <div>"Email" </div><br>
+              <input type="email" name="mail"/>            <br><br>
+               <button type="submit">Add user</button>
+         </form><br>
+             {{#users}}
+                <div>
+                  User <span>{{name}}</span> added
+                </div>
+            {{/users}}
+            {{#message}}
+               <div>
+             {{message}}
+               </div>
+            {{/message}}
+            </div>
+  </body>
+</html>

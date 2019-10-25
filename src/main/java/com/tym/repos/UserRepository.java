@@ -9,4 +9,5 @@ public interface UserRepository extends CrudRepository<User, Long> {
 
     List<User> findByMail(String mail);
 
+
 }

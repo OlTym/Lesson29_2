@@ -1,29 +1,87 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Spring</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Spring Boot</title>
+  <style>
+  body{
+    background-color: lightgrey;
+      }
+  h2{
+    text-align: center;
+  }
+  #header{
 
-</head>
-<body>
-    <div>Add user </div></br>
-    <form method="post" >
-              <div>"Name"</div>
-            <input type="text" name="name"/></br></br>
-             <div>"Email"</div>
-            <input type="text" name="mail"/></br></br>
-            <button type="submit">Add</button>
-         </form></br>
-             {{#users}}
-                <div>
-                  User  <span>{{name}}</span> added
-                </div>
-            {{/users}}
-              {{#message}}
-               <div>
-          {{message}}
-              </div>
-            {{/message}}
+  	border-bottom:3px gray;
+    border-bottom-style:ridge;
+  }
+  #content{
+      width: 79%;
+      font-size:1.3em;
+      text-align: center;
+      font-size:1.5em;
+  }
+  #sidebar{
+     border-right:3px gray;
+     border-right-style:	ridge;
+     float: left;
+     width: 20%;
+     padding: 5px;
+  }
 
+  #sidebar div{
+      padding: 2px;
+  }
+
+  #sidebar a{
+      display: block;
+      padding: 2px;
+      margin: 2px;
+      font-size: 1.3em;
+      text-decoration: none;
+  }
+
+  #sidebar a:hover{
+      margin: 0;
+      font-size:1.5em;
+  }
+  #footer{
+      border-top: 2 gray;
+      border-top-style:inset;
+      padding: 10px;
+      color: #000;
+      clear: both;
+      font-size:1.1em;
+  }
+  </style>
+
+
+ </head>
+ <body>
+ <div id="header"><h2>Sprin Boot testing application</h2></div>
+    <div id="sidebar">
+      <a href="add">Add user</a>
+         <br><br><br>
+      <a href="find">Get user</a>
+         <br><br><br>
+      <a href="getAllUsers">Get all user</a>
+         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     </div>
+<div id="content">
+           <br><br>
+         {{#users}}
+           <div>
+             User  <span>{{name}}</span>
+             id  {{id}}
+             mail  {{mail}}
+           </div>
+        {{/users}}<br>
+        {{#message}}
+            <div>
+              {{message}}
+            </div>
+        {{/message}}
+        </div>
+        <div id="footer">This is my footer</div>
   </body>
 </html>
